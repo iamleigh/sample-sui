@@ -1,0 +1,34 @@
+import { 
+	Section, 
+	Row, 
+	Col, 
+	Table, 
+	List, 
+	Code, 
+	Tag, 
+	PackageInstallGuide, 
+	PropSection, 
+	CommonPropsNotice,
+	FormValidationProps,
+	Message
+} from "@wpmudev/sui-docs"
+
+<PackageInstallGuide packageName="@wpmudev/sui-checkbox" />
+
+<Section title="CheckboxGroups Props" border={true} style={{ paddingBottom: 0 }}>
+    Use the <code>CheckboxGroups</code> component to create hierarchical structure with nested checkboxes, it has the following props:
+
+	<PropSection title="children" type="React Node">
+    	The elements children of the the component
+    </PropSection>
+		
+	<PropSection title="commonCheckboxProps" type="object">
+		The common checkbox props to be shared with all children checkboxes, accepted props are detailed in the <Code isSmall={true}>Checkbox</Code> section.
+	</PropSection>
+
+	<PropSection title="onChange" type="function">
+		Callback function to be executed when the state of any checkbox in the group is changed, the first parameter returns the state of all checkboxes in an array structure
+	</PropSection>
+</Section>
+
+<CommonPropsNotice />

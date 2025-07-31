@@ -1,0 +1,35 @@
+import { Source } from '@storybook/addon-docs';
+import { TabsPage } from '@wpmudev/sui-docs';
+import { Unstyled } from '@storybook/blocks';
+
+import Base from './PaletteBase.mdx';
+import Primary from './PalettePrimary.mdx';
+import Secondary from './PaletteSecondary.mdx';
+import Extended from './PaletteExtended.mdx';
+
+<Unstyled>
+	<TabsPage
+		title="Colors"
+		subtitle={
+			<>
+				This color system guide shows the unified colors used in the plugins
+				while helping to keep consistent experiences across our products
+				through helpers and predefined classes.
+			</>
+		}
+		status="ready"
+	>
+		<div id="base" label="Base">
+			<Base />
+		</div>
+		<div id="primary" label="Primary">
+			<Primary />
+		</div>
+		<div id="secondary" label="Secondary">
+			<Secondary />
+		</div>
+		<div id="extended" label="Extended">
+			<Extended />
+		</div>
+	</TabsPage>
+</Unstyled>

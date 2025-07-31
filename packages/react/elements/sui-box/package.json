@@ -1,0 +1,58 @@
+{
+  "name": "@wpmudev/sui-box",
+  "version": "1.0.0",
+  "description": "Box is a component utilized for presenting settings arranged in a two-column layout.",
+  "keywords": [],
+  "author": {
+    "name": "WPMU DEV",
+    "url": "https://wpmudev.com"
+  },
+  "contributors": [
+    {
+      "name": "Leighton Quito",
+      "email": "hello@iamleigh.com",
+      "url": "https://iamleigh.com",
+      "img": "https://avatars.githubusercontent.com/u/2328848?v=4",
+      "info": [
+        "Team Lead, Design Systems",
+        "Senior Frontend Engineer"
+      ]
+    }
+  ],
+  "license": "GPL-2.0",
+  "main": "src/index.ts",
+  "directories": {
+    "src": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wpmudev/sui-react.git",
+    "directory": "packages/react-box"
+  },
+  "scripts": {
+    "clean": "rm -rf dist && rm -rf lib",
+    "build": "npx tsup",
+    "build:dev": "npx tsup --watch",
+    "build:fast": "tsup src",
+    "dev": "npm build:fast -- --watch",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore",
+    "build:readme": "readme generate --input ../../../blueprint.md"
+  },
+  "bugs": {
+    "url": "https://github.com/wpmudev/sui-react/issues"
+  },
+  "homepage": "https://github.com/wpmudev/sui-react#readme",
+  "clean-package": "../../../postpack.config.json",
+  "dependencies": {
+    "@wpmudev/sui-utils": "^1.0.0",
+    "react": "^18.2.0"
+  }
+}

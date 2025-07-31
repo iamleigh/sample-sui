@@ -1,0 +1,160 @@
+import { Section, Row, Col, Table, List, Code, Tag, PackageInstallGuide, PropSection, CommonPropsNotice, FormValidationProps, Message } from '@wpmudev/sui-docs';
+
+<PackageInstallGuide packageName="@wpmudev/sui-input" />
+
+<Section title="Props">
+	These are the properties that can be passed to the <Code small={true}>Input</Code> component. Each property is described with its type, default value, and a brief description of its purpose.
+
+	<PropSection title="id" type="string" isRequired={true}>
+		This is a required property to assign a unique ID to the input.
+	</PropSection>
+
+	<PropSection title="isMultiline" type="boolean" defaultValue="false">
+		If set to <Code small={true}>true</Code>, it will use <Code small={true}>textarea</Code> tag instead of the <Code small={true}>input</Code> and the <Code small={true}>type</Code> prop will be ignored.
+	</PropSection>
+
+	<PropSection title="type" type="string" defaultValue="text">
+		Reflects the type of the input field whether it's text, number etc. it accepts [any valid html type](https://www.w3schools.com/html/html_form_input_types.asp).
+	</PropSection>
+
+	<PropSection title="name" type="string">
+		Assigns a name to the input field. This is useful when you want to group multiple inputs together or when you want to submit the form data.
+	</PropSection>
+
+	<PropSection title="defaultValue" type="string">
+		Used to set the initial value of the input field. This is useful when you want to provide a default value that can be changed by the user.
+	</PropSection>
+
+	<PropSection title="placeholder" type="string">
+		Used to display a hint or a placeholder text inside the input field when it is empty. This text will disappear when the user starts typing.
+	</PropSection>
+
+	<PropSection title="className" type="string">
+		Add additional class name(s) to the input wrapper if needed.
+	</PropSection>
+
+	<PropSection title="inputClass" type="string">
+		Add additional class names(s) to the input element itself.
+	</PropSection>
+
+	<PropSection title="icon" type="string">
+		The icon to be displayed inside the input. It can be any valid icon name from the SUI Icons Library, such as <Code small={true}>search</Code>. The icon will be displayed at the start of the input by default.
+	</PropSection>
+
+	<PropSection title="iconPosition" type="string" defaultValue="start">
+		This property defines the position of the icon within the input field. The allowed options are:
+		<List>
+			<span label={<><Code small={true}>start</Code> for leading icon.</>}/>
+			<span label={<><Code small={true}>end</Code> for trailing icon.</>} />
+		</List>
+	</PropSection>
+
+	<PropSection title="iconHint" type="string">
+		A tooltip hint that will be displayed when the user hovers over the icon. This is useful for providing additional information about the icon's purpose or functionality.
+		
+		<Message color="blue">
+			This property is only applicable when the <Code small={true}>iconPosition</Code> prop is set to <Code small={true}>end</Code>.
+		</Message>
+	</PropSection>
+
+	<PropSection title="iconTooltipWidth" type="number">
+		Allows to set a custom width for the icon tooltip. This is useful when you want to control the size of the tooltip that appears when the user hovers over the icon.
+
+		<Message color="blue">
+			This property is only applicable when the <Code small={true}>iconPosition</Code> prop is set to <Code small={true}>end</Code>.
+		</Message>
+	</PropSection>
+
+	<PropSection title="isSmall" type="boolean" defaultValue="false">
+		Changes the input size appearance to small. This will apply a smaller font size and padding to the input reducing its height.
+	</PropSection>
+
+	<PropSection title="customWidth" type="number">
+		Resizes the input width to a custom value in pixels. This will override the default width (100%) of the input.
+	</PropSection>
+
+	<PropSection title="allowClear" type="boolean" defaultValue="false">
+		This property enables an icon button inside the input field that when clicked, it will clear the input value.
+
+		<Message color="blue">
+			When the <Code small={true}>iconPosition</Code> prop is set to <Code small={true}>end</Code>, this property won't have any effect and the clear button will not be displayed.
+		</Message>
+	</PropSection>
+
+	<PropSection title="isReadOnly" type="boolean" defaultValue="false">
+		If set to <Code small={true}>true</Code> the input text won't be editable by the user.
+	</PropSection>
+
+	<PropSection title="isRequired" type="boolean" defaultValue="false">
+		Determines whether the input is required or not. If set to <Code small={true}>true</Code>, it will indicate that the input must be filled out before submitting a form.
+	</PropSection>
+
+	<PropSection title="isError" type="boolean" defaultValue="false">
+		If set to <Code small={true}>true</Code> the input will be styled as an error input, with a red border.
+	</PropSection>
+
+	<PropSection title="isDisabled" type="boolean" defaultValue="false">
+		Disables the input, preventing user interaction. The input will be styled as disabled.
+	</PropSection>
+
+	<PropSection title="onChange" type="function">
+		A callback function to be invoked when the input text changes, the first parameter is the change event object
+	</PropSection>
+
+	<PropSection title="onClick" type="function">
+		A callback function to be invoked when the input is clicked
+	</PropSection>
+
+	<PropSection title="onClickIcon" type="function">
+		A callback function to be invoked when the input icon is clicked
+	</PropSection>
+
+	<PropSection title="onClear" type="function">
+		A callback function to be invoked when the clear button is clicked
+	</PropSection>
+
+    <PropSection title="onMouseEnter" type="function">
+		A callback function to be invoked when the mouse enters the input
+	</PropSection>
+
+	<PropSection title="onMouseLeave" type="function">
+		A callback function to be invoked when the mouse leaves the input
+	</PropSection>
+
+	<PropSection title="onFocus" type="function">
+		A callback to be invoked when the input is focused
+	</PropSection>
+
+	<PropSection title="onKeyDown" type="function">
+		A callback to be invoked when the keydown event on the input gets triggered
+	</PropSection>
+
+	<PropSection title="onKeyUp" type="function">
+		A callback function to be invoked when the keyboard key is released
+	</PropSection>
+
+	<PropSection title="onMouseDownCapture" type="function">
+		A callback function to be invoked when the mouse button is pressed down
+	</PropSection>
+
+	<PropSection title="onMouseUp" type="function">
+		A callback function to be invoked when the mouse leaves the input
+	</PropSection>
+
+	<PropSection title="onMouseUpCapture" type="function">
+		A callback function to be invoked when the mouse button is released
+	</PropSection>
+
+	<PropSection title="onBlur" type="function">
+		A callback function to be invoked when the input looses focus
+	</PropSection>
+
+	<PropSection title="onBlurCapture" type="function">
+		A callback function to be invoked at an early stage of the blur event
+	</PropSection>
+
+	<FormValidationProps />
+
+</Section>
+
+<CommonPropsNotice />

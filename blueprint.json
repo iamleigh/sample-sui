@@ -1,0 +1,18 @@
+{
+  "badges": [
+    {
+      "alt": "Package Version",
+      "url": "{{pkg.homepage}}",
+      "img": "https://img.shields.io/badge/Package-{{pkg.version}}-green.svg",
+      "color": "green",
+      "style": "flat"
+    },
+    {
+      "alt": "License",
+      "url": "{{pkg.license}}",
+      "img": "https://img.shields.io/badge/License-GPL_3.0-blue.svg",
+      "color": "blue",
+      "style": "flat"
+    }
+  ]
+}

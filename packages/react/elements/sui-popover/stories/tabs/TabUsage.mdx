@@ -1,0 +1,86 @@
+import { Section, Row, Col, List } from '@wpmudev/sui-docs';
+
+import Anatomy from '../images/anatomy.svg';
+import Spec from '../images/spec.svg';
+import Position from '../images/position.svg';
+import Variations from '../images/variations.svg';
+import CaretPositions from "../images/caret-positions.svg"
+
+<Section title="Anatomy" contained={true} border={true}>
+	<Row gutter="sm">
+		<Col size="4">
+			<h3>1. Trigger Element:</h3>
+
+			An interactive element that initiates the display of the popover on hover,
+			click or focus.
+
+			<h3>2. Caret</h3>
+
+			UI element pointing to the triggered element.
+
+			<h3>3. Header</h3>
+
+			The header features the title accompanied by a contextual tag with the
+			dismiss icon.
+
+			<h3>4. Body</h3>
+
+			Contains contextual information and may include like images, forms, or any
+			other interactive elements.
+
+			<h3>5. Footer</h3>
+
+			Facilitates user actions with buttons for confirmation or cancellation. It
+			may also include supplementary details and navigation controls for a seamless
+			experience.
+		</Col>
+		<Col size="4">
+			<img
+				src={Anatomy}
+				alt="Popover anatomy"
+				style={{ marginBottom: 20 }}
+			/>
+		</Col>
+	</Row>
+</Section>
+
+<Section title="Variations" contained={true} border={true}>
+	Popovers are triggered by hover, click, or focus on the element. However, once the
+	popover is open, there are two ways to close it.
+
+	<Row>
+		<Col size="4">
+			<h3 style={{ marginTop: 0 }}>1. Auto close</h3>
+
+			If the popover contains short information without requiring user confirmation,
+			it can automatically close when the cursor moves away from the triggered element
+			or when clicking outside the popover.
+
+			<h3>2. Dismissible</h3>
+
+			Dismissible popovers can be closed by clicking the close icon or the action button that triggers the close function.
+		</Col>
+
+		<Col size="4">
+			<img src={Variations} alt="Variations" />
+		</Col>
+	</Row>
+</Section>
+
+<Section title="Position" border={true}>
+	A popover can open on the left, right, top, or bottom of the interactive element.
+
+	<img src={Position} alt="Popover Position" />
+</Section>
+
+<Section title="Caret position" border={true}>
+	Popup caret should be pointing to the element and positioned at the center.
+
+	<img src={CaretPositions} alt="Caret Positions" />
+</Section>
+
+<Section title="Spec" border={true}>
+	If the tooltip content exceeds the maximum width, it will be wrapped.
+
+	<img src={Spec} alt="Spec"/>
+</Section>

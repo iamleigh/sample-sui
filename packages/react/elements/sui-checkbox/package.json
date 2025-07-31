@@ -1,0 +1,53 @@
+{
+  "name": "@wpmudev/sui-checkbox",
+  "version": "1.0.0",
+  "description": "The upsell notice is used to upsell any features in the plugins.",
+  "keywords": [],
+  "author": {
+    "name": "WPMU DEV",
+    "url": "https://wpmudev.com"
+  },
+  "contributors": [
+    {
+      "name": "Leighton Quito",
+      "email": "hello@iamleigh.com",
+      "url": "https://iamleigh.com",
+      "img": "https://avatars.githubusercontent.com/u/2328848?v=4",
+      "info": [
+        "Team Lead, Design Systems",
+        "Senior Frontend Engineer"
+      ]
+    }
+  ],
+  "license": "GPL-3.0",
+  "main": "src/index.ts",
+  "directories": {
+    "src": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wpmudev/shared-ui.git",
+    "directory": "packages/react/elements/sui-checkbox"
+  },
+  "scripts": {
+    "clean": "rm -rf dist && rm -rf lib",
+    "clean:deep": "rm -rf dist && rm -rf lib && rm -rf tsconfig.buildinfo && rm -rf node_modules",
+    "prod": "npx tsup",
+    "dev": "tsup src --watch",
+    "build:readme": "readme generate --config ../../../../blueprint.json --input ../../../../blueprint.md"
+  },
+  "dependencies": {
+    "@wpmudev/sui-devtools": "^1.0.0",
+    "@wpmudev/sui-docs": "^1.0.0",
+    "@wpmudev/sui-hooks": "^1.0.0",
+    "@wpmudev/sui-utils": "^1.0.0",
+    "react": "^18.3.1"
+  }
+}

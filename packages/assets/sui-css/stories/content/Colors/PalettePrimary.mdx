@@ -1,0 +1,26 @@
+import { Section } from '@wpmudev/sui-docs';
+import { Palettes } from './PaletteComponent.js';
+
+<Section style={{ paddingTop: 0 }}>
+	<div className="csb-section__contained" style={{ marginBottom: 20 }}>
+		Our primary palette uses five shades of blue to bring boldness to
+		our brand. We use it smartly throughout our products to guide the
+		eye and highlight the significant bits.
+
+		We pepper secondary palette colors to soften the experience,
+		highlight, and subtly differentiate each product.
+	</div>
+	<Palettes
+		name="primary"
+		colors={{
+			"05": "#e6eeff",
+			10: "#b3cdff",
+			20: "#99bdff",
+			30: "#669BFF",
+			40: "#337aff",
+			50: "#0059ff",
+			60: "#0047cc",
+			70: "#003599",
+		}}
+	/>
+</Section>

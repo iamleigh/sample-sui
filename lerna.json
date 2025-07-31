@@ -1,0 +1,16 @@
+{
+  "npmClient": "yarn",
+  "version": "independent",
+  "useWorkspaces": true,
+  "packages": [
+    "packages/docs/*",
+    "packages/assets/*",
+    "packages/react/*",
+    "packages/react/elements/*"
+  ],
+  "command": {
+    "publish": {
+      "message": "🚀 Publish changes."
+    }
+  }
+}

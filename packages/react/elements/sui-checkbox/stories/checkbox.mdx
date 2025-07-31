@@ -1,0 +1,28 @@
+import { TabsPage } from "@wpmudev/sui-docs"
+import { Unstyled } from "@storybook/blocks"
+
+import TabUsage from "./tabs/TabUsage.mdx"
+import TabSingle from "./tabs/TabSingle.mdx"
+import TabGroup from "./tabs/TabGroup.mdx"
+import TabNesting from "./tabs/TabNesting.mdx"
+
+<Unstyled>
+	<TabsPage
+		title="Checkbox"
+		subtitle="Checkboxes are used to allow users to make binary choices or select one or more options from a list."
+		status="ready"
+	>
+		<div id="usage" label="Usage">
+			<TabUsage />
+		</div>
+		<div id="single" label="Single">
+			<TabSingle />
+		</div>
+		<div id="group" label="Group">
+			<TabGroup />
+		</div>
+		<div id="group" label="Nesting">
+			<TabNesting />
+		</div>
+	</TabsPage>
+</Unstyled>

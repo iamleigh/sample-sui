@@ -1,0 +1,21 @@
+import { Unstyled } from "@storybook/blocks"
+import { Source } from "@storybook/addon-docs"
+import { TabsPage } from "@wpmudev/sui-docs"
+
+import TabBox from "./tabs/TabBox.mdx"
+import TabBoxGroup from "./tabs/TabBoxGroup.mdx"
+
+<Unstyled>
+	<TabsPage
+		title="Box"
+		subtitle="Box is a component utilized for presenting settings arranged in a two-column layout."
+    status="ready"
+	>
+			<div id="box" label="Box">
+				<TabBox/>
+			</div>
+			<div id="box-group" label="Box Group">
+				<TabBoxGroup/>
+			</div>
+	</TabsPage>
+</Unstyled>

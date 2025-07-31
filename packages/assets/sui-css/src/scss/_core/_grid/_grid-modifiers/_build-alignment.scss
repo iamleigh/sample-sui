@@ -1,0 +1,70 @@
+@use "sass:map";
+@use "sass:math";
+
+// Import main blocks of styles.
+@use "../../../_utils/utils" as *;
+
+// Import grid variables.
+@use "../_grid-utils/variables" as *;
+
+@mixin build-alignment($block) {
+	@include sui-class($rtl: false, $theme: null) {
+		@include block($block) {
+			display: flex;
+			flex-direction: column;
+
+			@include modifier(inline) {
+				flex-flow: row wrap;
+				margin-left: -#{math.div(map.get($sui-grid-spacing, sm), 2)};
+				margin-right: -#{math.div(map.get($sui-grid-spacing, sm), 2)};
+
+				@include media(min-width, sm) {
+					margin-left: -#{math.div(map.get($sui-grid-spacing, md), 2)};
+					margin-right: -#{math.div(map.get($sui-grid-spacing, md), 2)};
+				}
+
+				@include media(min-width, lg) {
+					margin-left: -#{math.div(map.get($sui-grid-spacing, lg), 2)};
+					margin-right: -#{math.div(map.get($sui-grid-spacing, lg), 2)};
+				}
+			}
+
+			@each $bp-label, $bp-value in $breakpoints {
+				&-#{$bp-label} {
+					@include modifier(inline) {
+						@include media(min-width, $bp-label) {
+							display: flex;
+							flex-flow: row wrap;
+							margin-left: -#{math.div(
+									map.get($sui-grid-spacing, $bp-label),
+									2
+								)};
+							margin-right: -#{math.div(
+									map.get($sui-grid-spacing, $bp-label),
+									2
+								)};
+						}
+
+						@include media(min-width, sm) {
+							margin-left: -#{math.div(map.get($sui-grid-spacing, md), 2)};
+							margin-right: -#{math.div(map.get($sui-grid-spacing, md), 2)};
+						}
+
+						@include media(min-width, lg) {
+							margin-left: -#{math.div(map.get($sui-grid-spacing, lg), 2)};
+							margin-right: -#{math.div(map.get($sui-grid-spacing, lg), 2)};
+						}
+					}
+
+					@include modifier(stacked) {
+						@include media(min-width, $bp-label) {
+							display: block;
+							margin-left: 0;
+							margin-right: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}

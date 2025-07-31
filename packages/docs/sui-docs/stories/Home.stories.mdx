@@ -1,0 +1,78 @@
+import { Meta, Unstyled } from "@storybook/blocks"
+import { Home, Row, Col, SimpleCard } from "@docs/index"
+
+import image from "./images/banner-products.png"
+import image2x from "./images/banner-products@2x.png"
+
+import cardCss from "./images/css-framework.png"
+import cardCss2x from "./images/css-framework@2x.png"
+import cardComponents from "./images/components.png"
+import cardComponents2x from "./images/components@2x.png"
+import cardIcons from "./images/icons-pack.png"
+import cardIcons2x from "./images/icons-pack@2x.png"
+
+<Meta title="SUI/Home" />
+
+<Unstyled>
+	<Home
+		title="Shared UI"
+		subtitle={
+			<>
+				Design, develop, and deliver coherent product experiences with{" "}
+				<a href="https://wpmudev.com/" target="_blank" rel="nofollow">
+					WPMU DEV's
+				</a>{" "}
+				design system.
+			</>
+		}
+		action={{
+			link: "sui-getting-started",
+			label: "Getting Started",
+		}}
+		image={{
+			src: image,
+			src2x: image2x,
+		}}>
+		<Row gutter="sm">
+			<Col size="2">
+				<SimpleCard
+					title="Components"
+					description="Presentational UI components with encapsulated styles for React framework."
+					action="sui-components-core-grid--docs"
+					image={{
+						src: cardComponents,
+						src2x: cardComponents2x,
+					}}
+					theme="dark"
+					style={{ background: "#1A1A1A" }}
+				/>
+			</Col>
+			<Col size="2">
+				<SimpleCard
+					title="CSS Framework"
+					description="Styles-centric framework that gives you the base styles and structure for any component."
+					action="sui-css-framework-overview"
+					image={{
+						src: cardCss,
+						src2x: cardCss2x,
+					}}
+					theme="light"
+					style={{ background: "#F2F2F2" }}
+				/>
+			</Col>
+			<Col size="2">
+				<SimpleCard
+					title="Icons Pack"
+					description="Communicate messages at a glance and draw attention to important information."
+					action="sui-icons-pack--list"
+					image={{
+						src: cardIcons,
+						src2x: cardIcons2x,
+					}}
+					theme="light"
+					style={{ background: "#EBF2FF" }}
+				/>
+			</Col>
+		</Row>
+	</Home>
+</Unstyled>

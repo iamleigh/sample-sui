@@ -1,0 +1,26 @@
+import { Meta, Unstyled } from "@storybook/blocks"
+import { TabsPage } from "@docs/index"
+
+import TabComponents from "./content/Changelog/TabComponents.mdx"
+import TabCss from "./content/Changelog/TabCss.mdx"
+import TabIcons from "./content/Changelog/TabIcons.mdx"
+
+<Meta title="SUI/What's New/Changelog" />
+
+<Unstyled>
+	<TabsPage
+		title="Changelog"
+		subtitle={
+			<>Shared UI Design System's parts are versioned and released using Node Package Manager. NPM's <a href="https://www.npmjs.com/org/wpmudev" target="_blank" rel="nofollow">organization page</a> lists all packages available and their most recent versions.</>
+		}>
+		<div id="components" label="Components">
+			<TabComponents />
+		</div>
+		<div id="css-framework" label="CSS Framework">
+			<TabCss />
+		</div>
+		<div id="icons-pack" label="Icons Pack">
+			<TabIcons />
+		</div>
+	</TabsPage>
+</Unstyled>

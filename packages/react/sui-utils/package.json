@@ -1,0 +1,54 @@
+{
+  "name": "@wpmudev/sui-utils",
+  "version": "1.0.0",
+  "description": "A collection of utility functions for WPMU DEV Design System's React components",
+  "keywords": [],
+  "author": {
+    "name": "WPMU DEV",
+    "url": "https://wpmudev.com"
+  },
+  "contributors": [
+    {
+      "name": "Leighton Quito",
+      "email": "hello@iamleigh.com",
+      "url": "https://iamleigh.com",
+      "img": "https://avatars.githubusercontent.com/u/2328848?v=4",
+      "info": [
+        "Team Lead, Design Systems",
+        "Senior Frontend Engineer"
+      ]
+    }
+  ],
+  "license": "GPL-3.0",
+  "main": "src/index.ts",
+  "directories": {
+    "src": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wpmudev/shared-ui.git"
+  },
+  "scripts": {
+    "clean": "rm -rf dist && rm -rf lib",
+    "clean:deep": "rm -rf dist && rm -rf lib && rm -rf tsconfig.buildinfo && rm -rf node_modules",
+    "build:readme": "readme generate --config ../../../blueprint.json --input ../../../blueprint.md",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/wpmudev/shared-ui/issues"
+  },
+  "homepage": "https://github.com/wpmudev/shared-ui#readme",
+  "dependencies": {
+    "react": "^18.3.1"
+  },
+  "devDependencies": {
+    "classnames": "^2.5.1"
+  }
+}

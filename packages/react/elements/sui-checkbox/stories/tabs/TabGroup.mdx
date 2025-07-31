@@ -1,0 +1,50 @@
+import { 
+	Section, 
+	Row, 
+	Col, 
+	Table, 
+	List, 
+	Code, 
+	Tag, 
+	PackageInstallGuide, 
+	PropSection, 
+	CommonPropsNotice,
+	FormValidationProps,
+	Message
+} from "@wpmudev/sui-docs"
+
+<PackageInstallGuide packageName="@wpmudev/sui-checkbox" />
+
+<Section title="CheckboxGroup Props" border={true} style={{ paddingBottom: 0 }}>
+    Use the <code>CheckboxGroup</code> component to group multiple checkboxes together and display them horizontally or vertically, it has the following props:
+
+	<PropSection title="id" type="string">
+		A unique identifier for the checkbox group, within group context this will be generated automatically if not passed
+	</PropSection>
+
+    <PropSection title="children" type="React Node">
+    	The elements content of the component
+    </PropSection>
+
+    <PropSection title="title" type="string" defaultValue="group title">
+		Represents the group checkbox label
+    </PropSection>
+
+    <PropSection title="hasSubItems" type="boolean" defaultValue="true">
+		Whether the group has chldren checkboxes
+    </PropSection>
+
+    <PropSection title="isInline" type="boolean" defaultValue="false">
+		When set to <Code isSmall={true}>true</Code> the checkboxes will be displayed horizontally
+    </PropSection>
+
+    <PropSection title="commonCheckboxProps" type="object">
+		The common checkbox props to be shared with all children checkboxes, accepted props are detailed in the <Code isSmall={true}>Checkbox</Code> section.
+    </PropSection>
+
+    <PropSection title="onChange" type="function">
+		Callback function to be executed when the state of any checkbox in the group is changed, the first parameter returns the state of all checkboxes in an array structure
+    </PropSection>
+</Section>
+
+<CommonPropsNotice />

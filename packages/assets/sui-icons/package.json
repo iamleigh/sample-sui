@@ -1,0 +1,68 @@
+{
+  "name": "@wpmudev/sui-icons",
+  "description": "SUI Icons Pack, the WPMU DEV Products icons package",
+  "version": "1.0.0",
+  "license": "GPL-3.0",
+  "keywords": [],
+  "author": {
+    "name": "WPMU DEV",
+    "url": "https://wpmudev.com"
+  },
+  "contributors": [
+    {
+      "name": "Leighton Quito",
+      "email": "hello@iamleigh.com",
+      "url": "https://iamleigh.com",
+      "img": "https://avatars.githubusercontent.com/u/2328848?v=4",
+      "info": [
+        "Team Lead, Design Systems",
+        "Senior Frontend Engineer"
+      ]
+    }
+  ],
+  "main": "src/components/index.ts",
+  "style": "dist/css/sui-icons.css",
+  "input": "./src",
+  "output": "./dist",
+  "directories": {
+    "src": "src"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wpmudev/shared-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wpmudev/shared-ui/issues"
+  },
+  "homepage": "https://github.com/wpmudev/shared-ui#readme",
+  "scripts": {
+    "clean": "rm -rf dist && rm -rf lib",
+    "clean:deep": "rm -rf dist && rm -rf lib && rm -rf tsconfig.buildinfo && rm -rf node_modules",
+    "prod": "gulp"
+  },
+  "dependencies": {
+    "@wpmudev/sui-icon": "^1.0.0"
+  },
+  "devDependencies": {
+    "@wpmudev/sui-docs": "^1.0.0",
+    "autoprefixer": "^10.4.21",
+    "dedent": "^1.5.3",
+    "gulp": "^5.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-header": "^2.0.9",
+    "gulp-postcss": "^10.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^6.0.1",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "path": "^0.12.7",
+    "postcss": "^8.5.3",
+    "sass": "^1.86.3",
+    "ts-dedent": "^2.2.0"
+  }
+}

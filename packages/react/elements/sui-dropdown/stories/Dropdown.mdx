@@ -1,0 +1,22 @@
+import { TabsPage } from "@wpmudev/sui-docs"
+import { Unstyled } from "@storybook/blocks"
+
+import TabUsage from "./tabs/TabUsage.mdx"
+import TabCode from "./tabs/TabCode.mdx"
+
+<Unstyled>
+	<TabsPage
+		title="Dropdown"
+		subtitle={`Dropdown provide a list of menus or options for users. 
+				   They can represent values in forms or be used for actions like filtering or sorting content.`}
+    	status="draft"
+    >
+    		<div id="usage" label="Usage">
+    			<TabUsage />
+    		</div>
+    		<div id="code" label="Code">
+    			<TabCode />
+    		</div>
+    </TabsPage>
+
+</Unstyled>

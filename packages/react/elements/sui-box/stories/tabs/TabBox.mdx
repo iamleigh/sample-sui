@@ -1,0 +1,40 @@
+import { Section, Row, Col, Table, List, Code, Tag, PackageInstallGuide, PropSection, CommonPropsNotice } from "@wpmudev/sui-docs"
+
+<PackageInstallGuide packageName="@wpmudev/sui-box" />
+
+<Section title="Box Props" border={true}>
+    	<PropSection title="title" type="string">
+			Specifies the text displayed at the top of the box as a title.
+    	</PropSection>
+
+    	<PropSection title="icon" type="string">
+			Specifies the name of the icon to display in the box header.
+    	</PropSection>
+
+    	<PropSection title="hideMobileIcon" type="boolean" defaultValue="false">
+			Hides the icon in the box header when viewed on mobile devices.
+    	</PropSection>
+
+    	<PropSection title="headerLeft" type="React Node | string">
+			The content to display on the <strong>left side</strong> of the box header. Accepts a React node or string, such as an icon, button, or custom element.
+    	</PropSection>
+
+    	<PropSection title="headerRight" type="React Node | string">
+			Specifies the content to display on the <strong>right side</strong> of the box header. Accepts a React node or string, such as buttons, icons, or custom elements.
+    	</PropSection>
+
+    	<PropSection title="style" type="object">
+    		Custom inline styles to apply to the container. Accepts a style object compatible with React's <Code>style</Code> prop.
+    	</PropSection>
+
+    	<PropSection title="className" type="string">
+			Applies custom CSS class name(s) to the box container for additional styling or targeting with external stylesheets.
+    	</PropSection>
+
+    	<PropSection title="children" type="React Node">
+    		This is the content of the component. It could be any valid React node including text, elements, or components.
+    	</PropSection>
+
+</Section>
+
+<CommonPropsNotice />

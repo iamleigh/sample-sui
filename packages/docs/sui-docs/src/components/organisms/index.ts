@@ -1,0 +1,5 @@
+export * from "./header/header"
+export * from "./banner/banner"
+export * from "./preview/preview"
+export * from "./section/section"
+export * from "./footer/footer"

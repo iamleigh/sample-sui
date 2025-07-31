@@ -1,0 +1,32 @@
+import { Section, Row, Col, Table, List, Code, Tag, PackageInstallGuide, PropSection, CommonPropsNotice } from "@wpmudev/sui-docs"
+
+<PackageInstallGuide packageName="@wpmudev/sui-box" />
+
+<Section title="BoxGroup Props" border={true}>
+	<PropSection title="isInline" type="boolean" defaultValue="false">
+		Indicates whether the boxes should be displayed inline or not.
+	</PropSection>
+
+	<PropSection title="hasPadding" type="boolean" defaultValue="true">
+		Controls the horizontal padding within the container. When set to <Code>true</Code>, horizontal padding is applied; when <Code>false</Code>, padding is removed.
+	</PropSection>
+
+	<PropSection title="isHeader" type="boolean" defaultValue="false">
+		Indicates whether the boxes should be displayed as header with a bottom border to indicate separation from the content below.
+	</PropSection>
+
+	<PropSection title="isFooter" type="boolean" defaultValue="false">
+		Indicates whether the boxes should be displayed as footer with a top border to indicate separation from the content above.
+	</PropSection>
+
+	<PropSection title="style" type="object">
+		Custom inline styles to apply to the container. Accepts a style object compatible with React's <Code>style</Code> prop.
+	</PropSection>
+
+	<PropSection title="children" type="React Node">
+		This is the content of the component. It could be any valid React node including text, elements, or components.
+	</PropSection>
+
+</Section>
+
+<CommonPropsNotice />

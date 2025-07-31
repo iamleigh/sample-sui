@@ -1,0 +1,56 @@
+import { Section, Row, Col, Table, List, Code, Tag, PackageInstallGuide, PropSection, CommonPropsNotice, Message } from "@wpmudev/sui-docs"
+
+<Section border={true} style={{ paddingTop: 0 }}>
+	<Message color="yellow">
+		This component is still <strong>under development</strong> and its documentation might differ from playground until it's fully ready.
+	</Message>
+</Section>
+
+<PackageInstallGuide packageName="@wpmudev/sui-dropdown" />
+
+<Section title="Props" border={true}>
+    <PropSection title="label" type="string" isRequired={true}>
+    	Text label displayed on the dropdown trigger button.
+    </PropSection>
+
+	<PropSection title="className" type="string">
+    	Custom class name(s) applied to the dropdown container for additional styling or layout overrides.
+    </PropSection>
+
+	<PropSection title="colorScheme" type="string" defaultValue="black">
+		Defines the color scheme of the dropdown trigger button. Check <Code isSmall={true}>Button</Code> component for allowed values.
+    </PropSection>
+
+	<PropSection title="buttonIcon" type="string">
+    	Optional icon to display within the dropdown trigger button.
+		Can be used alone or alongside the label for visual context.
+
+		You can check available icons on <a href="https://github.com/wpmudev/sui-icons" target="_blank"> sui-icon</a> package.
+    </PropSection>
+
+	<PropSection title="iconOnly" type="boolean" defaultValue="false">
+    	Indicates whether the label should be visually hidden or not.
+    </PropSection>
+
+	<PropSection title="hasArrow" type="boolean" defaultValue="true">
+    	Determines whether to display an arrow icon in the dropdown button.
+    </PropSection>
+
+	<PropSection title="isResponsive" type="boolean" defaultValue="false">
+    	When true, hides the button label on smaller screens, showing only the icon for a more compact layout.
+    </PropSection>
+
+    <PropSection title="isSmall" type="boolean" defaultValue="false">
+		Indicates whether the dropdown button size should be small or not.
+    </PropSection>
+
+	<PropSection title="isDisabled" type="boolean">
+		If true, disables the dropdown and prevents user interaction.
+    </PropSection>
+
+	<PropSection title="isAutoClose" type="boolean" defaultValue="true">
+		Determines whether the dropdown should close when clicking outside of it.
+    </PropSection>
+</Section>
+
+<CommonPropsNotice />

@@ -1,0 +1,60 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["DOM", "ESNext"],
+    "jsx": "react-jsx",
+    "declaration": true,
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "strict": true,
+    "allowJs": true,
+    "isolatedModules": true,
+    "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "downlevelIteration": true,
+    "emitDeclarationOnly": true,
+    "types": ["node", "react", "react-dom"],
+    "baseUrl": "./",
+    "paths": {
+      // ⚠️ Required: Manual Mapping
+      // This is necessary to avoid conflicts between local
+      // and NPM packages.
+      "@wpmudev/sui-css": ["packages/assets/sui-css/src/*"],
+      "@wpmudev/sui-icons": ["packages/assets/sui-icons/src/components/*"],
+
+      "@wpmudev/sui-docs": ["packages/docs/sui-docs/src/*"],
+
+      "@wpmudev/sui-devtools": ["packages/react/sui-devtools/src/*"],
+      "@wpmudev/sui-hooks": ["packages/react/sui-hooks/src/*"],
+      "@wpmudev/sui-utils": ["packages/react/sui-utils/src/*"],
+
+      "@wpmudev/sui-box": ["packages/react/elements/sui-box/src/*"],
+      "@wpmudev/sui-button": ["packages/react/elements/sui-button/src/*"],
+      "@wpmudev/sui-checkbox": ["packages/react/elements/sui-checkbox/src/*"],
+      "@wpmudev/sui-dropdown": ["packages/react/elements/sui-dropdown/src/*"],
+      "@wpmudev/sui-form-field": [
+        "packages/react/elements/sui-form-field/src/*"
+      ],
+      "@wpmudev/sui-grid": ["packages/react/elements/sui-grid/src/*"],
+      "@wpmudev/sui-icon": ["packages/react/elements/sui-icon/src/*"],
+      "@wpmudev/sui-input": ["packages/react/elements/sui-input/src/*"],
+      "@wpmudev/sui-modal": ["packages/react/elements/sui-modal/src/*"],
+      "@wpmudev/sui-popover": ["packages/react/elements/sui-popover/src/*"],
+      "@wpmudev/sui-score": ["packages/react/elements/sui-score/src/*"],
+      "@wpmudev/sui-spinner": ["packages/react/elements/sui-spinner/src/*"],
+      "@wpmudev/sui-tag": ["packages/react/elements/sui-tag/src/*"],
+      "@wpmudev/sui-tooltip": ["packages/react/elements/sui-tooltip/src/*"],
+      "@wpmudev/sui-upsell": ["packages/react/elements/sui-upsell/src/*"],
+      "@wpmudev/sui-upsell-notice": [
+        "packages/react/elements/sui-upsell-notice/src/*"
+      ]
+    },
+    "outDir": "dist"
+  },
+  "include": ["packages/*/sui-*/**/*.ts", "packages/*/sui-*/**/*.tsx"],
+  "exclude": ["**/node_modules", "**/dist", "**/lib"]
+}

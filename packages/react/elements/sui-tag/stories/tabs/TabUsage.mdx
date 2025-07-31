@@ -1,0 +1,77 @@
+import { Section, Row, Col, List } from "@wpmudev/sui-docs"
+
+import Anatomy from "../images/anatomy.svg"
+import Variations from "../images/variations.svg"
+import Type from "../images/type.svg"
+import Structured from "../images/structured.svg"
+import StructuredBlue from "../images/structured-blue.svg"
+import StructuredBlack from "../images/structured-black.svg"
+import White from "../images/white.svg"
+import Style from "../images/style.svg"
+import Size from "../images/size.svg"
+
+<Section title="Anatomy" border={true}>
+	<Row>
+		<Col>
+			<h3 style={{marginTop: 0}}>1. Text</h3>
+			<p>The main label displayed inside the tag.</p>
+
+    		<h3>2. Container</h3>
+    		<p>The tag wrapper that defines the shape, color, and size.</p>
+
+			<h3>3. Dismiss icon - Optional</h3>
+			<p>Allows users to remove the tag. Only available in the default size.</p>
+    	</Col>
+    	<Col size="3">
+    		<img src={Anatomy} alt="Visually represent the tag element anatomy." />
+    	</Col>
+    </Row>
+</Section>
+
+<Section title="Variations" border={true}>
+	<h3>1. Solid</h3>
+    <p>Tags can be styled with five colors to represent meaning and state. These options are:</p>
+	<List>
+		<span label="Gray (default)" />
+		<span label="Blue" />
+		<span label="Yellow" />
+		<span label="Green" />
+		<span label="Red" />
+	</List>
+	<img src={Variations} alt="Visually represent each tag color variation." />
+
+	&nbsp;
+	<p>Each solid color also has a <strong>white variant</strong> to use  when there's a contrast issue with a dark backgrounds.</p>
+	<img src={White} alt="Visually represent a solid tag in a white background variation with black text." aria-hidden="true" />
+
+	<h3>2. Outlined (Structured Tags)</h3>
+    <p>Structured tags use an outlined style and are limited to specific usecases.</p>
+	<img src={Structured} alt="Visually represent an outlined tag in black and blue variations." aria-hidden="true" />
+
+	&nbsp;
+	<p><strong>Blue Structured Tags</strong> are used to indicate beta, coming soon, new, free, and hosting. The typography for Free and Coming Soon should be uppercase.</p>
+	<img src={StructuredBlue} alt="Structured Blue Tag" aria-hidden="true" />
+
+	&nbsp;
+	<p><strong>Black Structured Tags</strong> are used to indicate pro features.</p>
+	<img src={StructuredBlack} alt="Structured Black Tag" aria-hidden="true" />
+
+	<h3>3. Dismissible</h3>
+    <p>Tags can include a dismiss (✕) button, but this option is <strong>only valid in the default size</strong>.</p>
+	<img src={Type} alt="Visual representation of a tag with dismiss button." aria-hidden="true" />
+</Section>
+
+<Section title="Sizes" border={true}>
+	<p>Tags are available in two sizes: <strong>default</strong> and <strong>small</strong>.</p>
+	<img src={Size} alt="Visual comparison between default and small tag." aria-hidden="true" />
+</Section>
+
+<Section title="Text Display" border={true}>
+	<p>Tags are designed to be used in a variety of contexts, that's why we support three display modes for text:</p>
+	<List>
+		<span label={<><strong>Single-line</strong>, default option</>} />
+		<span label={<><strong>Multiple Line</strong>, wraps long text.</>} />
+		<span label={<><strong>Truncated</strong>, shows ellipsis for overflow.</>} />
+	</List>
+	<img src={Style} alt="Visual comparison between three different modes to wrap content." aria-hidden="true" />
+</Section>

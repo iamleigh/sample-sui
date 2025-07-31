@@ -1,0 +1,58 @@
+import { Section, Row, Col, Table, List, Code, Tag, PackageInstallGuide, PropSection, CommonPropsNotice } from '@wpmudev/sui-docs';
+
+<PackageInstallGuide packageName="@wpmudev/sui-tag" />
+
+<Section title="Props" border={true}>
+	<PropSection title="color" type="string">
+		Defines the color of the tag. Allowed options are:
+		<List>
+			<span label={<><em>empty</em> - It fallsback to gray color.</>} />
+			<span label={<Code small={true}>blue</Code>} />
+			<span label={<Code small={true}>yellow</Code>} />
+			<span label={<Code small={true}>red</Code>} />
+			<span label={<Code small={true}>green</Code>} />
+			<span label={<Code small={true}>white</Code>} />
+			<span label={<Code small={true}>black</Code>} />
+		</List>
+	</PropSection>
+
+	<PropSection title="contentWrap" type="string" defaultValue="default">
+		<p>When the available space is unsufficient, the tag could have one of three styles: </p>
+		<List>
+			<span label={<><em>empty</em> - It fallsback to single inline text. </>} />
+			<span label={<><Code small={true}>multiline</Code> - It displays the text multilined. </>} />
+			<span label={<><Code small={true}>truncated</Code> - It displays the text truncated. </>} />
+		</List>
+	</PropSection>
+
+	<PropSection title="isUppercase" type="boolean" defaultValue="false">
+		When set to <Code small={true}>true</Code>, the tag text will be in uppercase.
+	</PropSection>
+	
+	<PropSection title="isOutlined" type="boolean" defaultValue="false">
+		When this property is set to <Code small={true}>true</Code>, the tag is displayed with an outlined style instead of a solid background.
+	</PropSection>
+
+	<PropSection title="isSmall" type="boolean" defaultValue="false">
+		When set to <Code small={true}>true</Code> the tag will have a smaller size.
+	</PropSection>
+
+	<PropSection title="isDisabled" type="boolean" defaultValue="false">
+		When set to <Code small={true}> true </Code>, the tag  will be disabled and it will have a diffrent style.
+	</PropSection>
+
+	<PropSection title="onDismiss" type="function">
+		A callback function that is called when the dismiss button is clicked. If this property is provided, a dismiss button will appear on the tag, allowing users to call the function for removal.
+	</PropSection>
+
+	<PropSection title="className" type="string">
+		Allows you to add a custom CSS class to the tag for additional styling.
+	</PropSection>
+
+	<PropSection title="children" type="React Node">
+		The content to be displayed inside the tag. It is recommended to pass an string to this property to ensure proper rendering.
+	</PropSection>
+
+</Section>
+
+<CommonPropsNotice />
