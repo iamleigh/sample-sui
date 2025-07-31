@@ -9,6 +9,13 @@ The project originally started with **Storybook 6**, **JavaScript**, and **Lerna
 Over time, it was progressively migrated to **TypeScript** to support type-safety and improved maintainability,
 though you may still find some isolated JavaScript files from earlier iterations.
 
+The Storybook showcase was 100% designed by me based on Storybook 6 and its constraints. You can take a look
+at an extraction of the original Figma file at the link below:<br/>
+[SUI 3.0.0 / Storybook](https://www.figma.com/design/sYCLaqTKOebt9N3duZNPXY/SUI-3.0.0---Storybook?node-id=0-1&t=RO7OQvIFtOYjSAcB-1)
+
+**The design varies from the final implementation in some parts since I had to adjust it when we migrated
+from Storybook 6 to Storybook 7, since it introduced new constraints to the showcase personalization.**
+
 🔐 **Note:** This is a production codebase. The UI system was deployed across WPMU DEV’s
 plugin suite (Forminator, Smush, Hustle, and more). The submitted code samples were
 **solely coded by me (including the architecture I created for this project)** but authored
@@ -86,12 +93,15 @@ and package-specific styles in a highly customizable way.
 
 > This code sample uses **legacy dependencies** to reflect the exact environment used in production.
 
-- Node version: **18.x**
+- Node version: **20.19.4**
 - Yarn version: **1.22.22**
 - Storybook version: **7.4.5**
 
 ```bash
+# Install all the required dependencies
 yarn install
+
+# Run the project locally
 yarn storybook
 ```
 
@@ -119,20 +129,25 @@ was required. For this reason, we remained on early 7.x versions where this flex
 
 ## ✅ Submission Criteria Alignment
 
-| ✅ Requirement                                               | 💬 Explanation                                                  |
-|-------------------------------------------------------------|-----------------------------------------------------------------|
-| Emphasis on relevant skills                                 | Component architecture, React, TypeScript, Storybook            |
-| Singular component/application/build                        | This is a modular but unified design system build               |
-| Primary author of the code                                  | I led the project and wrote all submitted code                  |
-| Clear explanation of what’s being submitted                 | This README 😊                                                   |
+| ✅ Requirement                               | 💬 Explanation                                                                                          |
+|---------------------------------------------|------------------------------------------------------------------------------------------------------|
+| **Semantic HTML**                           | Components follow semantic markup with roles (e.g., `dialog`, `aria-modal`) and structural tags for accessibility. |
+| **CSS and custom UI architecture**          | Fully custom BEM-based CSS and Atomic Design structure, no CSS frameworks, ensuring scalability and consistency. |
+| **Component architecture**                  | Modular monorepo design system with isolated packages and reusable utilities, built for enterprise-scale apps. |
+| **Design & QA**                             | Entirely designed and implemented by me; includes Storybook integration to validate design fidelity and UX quality. |
+| **JavaScript without jQuery**               | Pure React + TypeScript implementation, no legacy jQuery dependencies.                                  |
+| **React**                                   | Built entirely with React functional components and hooks, leveraging context and custom hooks where needed. |
+| **Accessibility**                           | Implements ARIA roles, keyboard interactions, and focus management in core components for better a11y support. |
+| **WordPress/PHP (recommended)**             | Although this repo is React-only, these components were designed for and deployed in WordPress plugins (Forminator, Hustle, etc.). |
 
 ## 📂 What to Look For
 
-- Look into any component folder (e.g. @wpmudev/sui-button)
-- Review structure, prop typing, and Storybook setup
-- Note the adherence to best practices (naming, a11y, structure)
-- Check how isolated logic is used with reusable styles and utilities
+- Explore any component folder (e.g., `@wpmudev/sui-button`) to see real implementation details.
+- Review **prop typing** with TypeScript, including JSDoc-style comments for DX and Storybook controls.
+- Inspect **Storybook stories** to see how components are documented, demoed, and tested visually.
+- Note the **adherence to best practices** in naming conventions, accessibility (a11y), and architectural consistency.
+- Check how **logic is decoupled from UI**, using utilities, hooks, and context providers to keep components reusable and maintainable.
 
-If you'd like to dive deeper into any piece, I’d be happy to walk through it.
+If you'd like to dive deeper into any piece, I’d be happy to walk you through it.
 
 — **Leighton Quito**
