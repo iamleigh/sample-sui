@@ -29,8 +29,8 @@ const Upsell: React.FC<UpsellProps> = ({
 		"sui-upsell",
 		{
 			[variation as string]: !isEmpty(variation ?? ""),
-			"lg": featuresInline,
-			"sm": !featuresInline,
+			lg: featuresInline,
+			sm: !featuresInline,
 		},
 		suiInlineClassname,
 	)

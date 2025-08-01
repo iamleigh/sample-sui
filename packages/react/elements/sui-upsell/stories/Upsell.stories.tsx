@@ -40,9 +40,25 @@ const Playground = (args: UpsellProps) => {
 					<Col size="8">
 						<Box title="Lorem Ipsum" icon="SquareCode">
 							<BoxGroup>
-								<p>Lorem ipsum dolor sit amet senectus eleifend turpis netus semper adipiscing dictum feugiat. Aenean semper tellus lectus imperdiet odio lobortis justo aliquam. Euismod tortor non id dolore vulputate et nisi magna leo justo semper. Dictumst lacus viverra feugiat etiam elementum imperdiet tempor non nullam volutpat nunc labore. Magna vestibulum est quisque libero mauris phasellus vitae faucibus risus est purus.</p>
+								<p>
+									Lorem ipsum dolor sit amet senectus eleifend turpis netus
+									semper adipiscing dictum feugiat. Aenean semper tellus lectus
+									imperdiet odio lobortis justo aliquam. Euismod tortor non id
+									dolore vulputate et nisi magna leo justo semper. Dictumst
+									lacus viverra feugiat etiam elementum imperdiet tempor non
+									nullam volutpat nunc labore. Magna vestibulum est quisque
+									libero mauris phasellus vitae faucibus risus est purus.
+								</p>
 
-								<p>Lorem ipsum dolor sit amet aliquet fermentum netus. Quis nibh hac nullam neque sodales tortor sed nisi ullamcorper phasellus auctor. Neque tellus nibh lobortis proin purus auctor luctus eu netus lectus quis maecenas. Senectus imperdiet vel auctor senectus sed fringilla ultrices tempus arcu non. Pharetra orci facilisis magna ullamcorper sollicitudin et libero aenean mauris feugiat mi.</p>
+								<p>
+									Lorem ipsum dolor sit amet aliquet fermentum netus. Quis nibh
+									hac nullam neque sodales tortor sed nisi ullamcorper phasellus
+									auctor. Neque tellus nibh lobortis proin purus auctor luctus
+									eu netus lectus quis maecenas. Senectus imperdiet vel auctor
+									senectus sed fringilla ultrices tempus arcu non. Pharetra orci
+									facilisis magna ullamcorper sollicitudin et libero aenean
+									mauris feugiat mi.
+								</p>
 							</BoxGroup>
 						</Box>
 					</Col>
@@ -50,14 +66,14 @@ const Playground = (args: UpsellProps) => {
 					<Col size="4">
 						<Upsell
 							variation={args.variation}
-							{...(args.title && {title: args.title})}
-							{...(args.description && {description: args.description})}
-							{...(args.featuresList && {featuresList: args.featuresList})}
-							{...(args.featuresIcon && {featuresIcon: args.featuresIcon})}
+							{...(args.title && { title: args.title })}
+							{...(args.description && { description: args.description })}
+							{...(args.featuresList && { featuresList: args.featuresList })}
+							{...(args.featuresIcon && { featuresIcon: args.featuresIcon })}
 							featuresInline={args.featuresInline}
-							{...(args.featuresTitle && {featuresTitle: args.featuresTitle})}
+							{...(args.featuresTitle && { featuresTitle: args.featuresTitle })}
 						>
-							{ args.children && (
+							{args.children && (
 								<>
 									<Button type="primary" colorScheme="black" isSmall={true}>
 										Upgrade now
@@ -133,19 +149,6 @@ Playground.argTypes = {
 	},
 	children: {
 		name: "children (Use predefined content)",
-	},
-
-
-	size: {
-		name: "Size",
-		options: ["sm", "lg"],
-		control: {
-			type: "select",
-			labels: {
-				sm: "Small",
-				lg: "Large",
-			},
-		},
 	},
 }
 
