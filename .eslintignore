@@ -1,0 +1,12 @@
+dist
+build
+coverage
+node_modules
+*.min.js
+*.min.css
+*.md
+*.mdx
+.cache
+.idea
+.tsbuildinfo
+*.tsbuildinfo

@@ -1,0 +1,28 @@
+# OS-specific
+.DS_Store
+
+# IDEs & Editors
+.idea
+.vscode
+
+# Node & NPM
+node_modules
+dist
+lib
+
+# Logs
+*.log
+coverage
+
+# Package Managers
+.verdaccio
+.changelog
+
+# Storybook
+storybook-static
+*storybook.log
+
+# Dev Tools & Caches
+.dccache
+.tsbuildinfo
+*.tsbuildinfo

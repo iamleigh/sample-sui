@@ -1,0 +1,21 @@
+# Ignore artifacts:
+dist
+build
+coverage
+node_modules
+
+# Ignore minified files:
+*.min.js
+*.min.css
+*.md
+*.mdx
+
+# Other files to ignore:
+.idea
+.cache
+.tsbuildinfo
+*.tsbuildinfo
+package-lock.json
+
+# Auto-Generated Design Tokens
+_tokens.scss
