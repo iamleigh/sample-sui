@@ -25,7 +25,7 @@ describe("@wpmudev/sui-input", () => {
 		render(
 			<Input id="clear-check" allowClear={true} defaultValue="Hello World" />,
 		)
-		expect(screen.getByText("Clear")).toBeInTheDocument()
+		expect(screen.getByTestId("button")).toBeInTheDocument()
 	})
 
 	it("🧱 Renders icon correctly for both 'start' and 'end' positions", () => {
