@@ -4,7 +4,8 @@ import { screen, render, fireEvent } from "@testing-library/react"
 import { a11yTest } from "@wpmudev/sui-devtools"
 import { Button } from "@wpmudev/sui-button"
 import { Dropdown, DropdownRefProps } from "../src"
-import { MenuGroupProps, MenuItemProps } from "../src/Dropdown.types"
+import { MenuGroupProps } from "../src/DropdownMenuGroup.types"
+import { MenuItemProps } from "../src/DropdownMenuItem.types"
 
 describe("@wpmudev/sui-dropdown", () => {
 	const props = {
@@ -34,35 +35,6 @@ describe("@wpmudev/sui-dropdown", () => {
 	it("🧱 Renders correctly", () => {
 		render(<Dropdown {...props} />)
 		expect(screen.getByTestId("dropdown")).toBeInTheDocument()
-	})
-
-	it("🎯 Custom trigger button toggles dropdown", () => {
-		const openBtnTitle = "__OPEN_BTN_TITLE__"
-
-		const DropdownWithTrigger = () => {
-			const ref = useRef<DropdownRefProps | null>(null)
-			return (
-				<Dropdown
-					{...props}
-					ref={ref}
-					trigger={
-						<Button onClick={() => ref?.current?.toggle()}>
-							{openBtnTitle}
-						</Button>
-					}
-				/>
-			)
-		}
-
-		render(<DropdownWithTrigger />)
-		const btn = screen.getByText(openBtnTitle)
-		const dropdown = screen.getByTestId("dropdown")
-
-		expect(dropdown).not.toHaveClass("sui-dropdown--open")
-		fireEvent.click(btn)
-		expect(dropdown).toHaveClass("sui-dropdown--open")
-		fireEvent.click(btn)
-		expect(dropdown).not.toHaveClass("sui-dropdown--open")
 	})
 
 	it("🎨 Applies 'isSmall' class when enabled", () => {

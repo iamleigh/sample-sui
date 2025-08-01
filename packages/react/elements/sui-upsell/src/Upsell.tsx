@@ -11,7 +11,7 @@ import { UpsellProps } from "./Upsell.types"
 import { variationsList } from "./Upsell.helpers"
 
 const Upsell: React.FC<UpsellProps> = ({
-	variation,
+	variation = "hummingbird",
 	title,
 	description,
 	featuresList = [],

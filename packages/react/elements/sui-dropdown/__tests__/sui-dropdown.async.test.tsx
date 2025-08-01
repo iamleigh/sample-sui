@@ -10,11 +10,11 @@ const AsyncDropdown = () => {
 
 	return (
 		<Dropdown
-			type="select"
+			menuType="select"
 			isAsync={true}
 			label="Async Options"
-			allowSearch={true}
-			searchPlaceholder="Search..."
+			menuSearchPlaceholder="Search..."
+			onMenuSearch={() => {}}
 			asyncOptions={{ perPage }}
 			getOptions={async (
 				search: string,

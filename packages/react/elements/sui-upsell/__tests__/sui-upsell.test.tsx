@@ -37,7 +37,7 @@ describe("@wpmudev/sui-upsell", () => {
 			"Database Cleanup notifications",
 		]
 
-		render(<Upsell features={features} />)
+		render(<Upsell featuresList={features} />)
 
 		const featureList = screen.getByTestId("features")
 		expect(featureList).toBeInTheDocument()

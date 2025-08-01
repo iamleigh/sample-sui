@@ -20,7 +20,7 @@ interface UpsellProps
 	 *
 	 * Examples include: "hummingbird", "smush", "snapshot", "defender".
 	 */
-	variation:
+	variation?:
 		| "hummingbird"
 		| "smush"
 		| "snapshot"

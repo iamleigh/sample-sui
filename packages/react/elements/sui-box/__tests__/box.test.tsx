@@ -2,7 +2,7 @@ import React from "react"
 import "@testing-library/jest-dom"
 import { render, screen } from "@testing-library/react"
 import { Box, BoxGroup } from "../src"
-import { a11yTest } from "@wpmudev/sui-utils"
+import { a11yTest } from "@wpmudev/sui-devtools"
 import { IconsNamesType } from "@wpmudev/sui-icons"
 
 describe("@wpmudev/box", () => {

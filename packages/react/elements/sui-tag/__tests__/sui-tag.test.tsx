@@ -18,7 +18,7 @@ describe("@wpmudev/sui-tag", () => {
 
 	it("🎨 Applies design + colorScheme classes", () => {
 		render(
-			<Tag design="outlined" colorScheme="blue">
+			<Tag isOutlined={true} color="blue">
 				{text}
 			</Tag>,
 		)
