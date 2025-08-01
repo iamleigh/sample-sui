@@ -74,8 +74,8 @@ const Playground = (args: BoxProps & BoxGroupProps) => {
 					{args.isHeader && (
 						<BoxGroup>
 							<p>
-								Notice how the element above now has a bottom border, that's
-								because it has <code>isHeader</code> enabled.
+								Notice how the element above now has a bottom border,
+								that&apos;s because it has <code>isHeader</code> enabled.
 							</p>
 						</BoxGroup>
 					)}

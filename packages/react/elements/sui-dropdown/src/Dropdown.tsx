@@ -36,8 +36,8 @@ import { DropdownProps, DropdownRefProps } from "./Dropdown.types"
  * custom content rendering, and configurable placement and sizing.
  *
  * @param {DropdownProps} props - All configuration options, event callbacks, and content
- *                                customization for the Dropdown component.
- * @returns {JSX.Element} A fully interactive dropdown menu element.
+ *                              customization for the Dropdown component.
+ * @return {JSX.Element} A fully interactive dropdown menu element.
  */
 const Dropdown = forwardRef<DropdownRefProps | null, DropdownProps>(
 	(

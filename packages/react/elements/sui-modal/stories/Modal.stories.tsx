@@ -74,7 +74,7 @@ const Playground = (args: PlaygroundProps) => {
 										type="secondary"
 										colorScheme="blue"
 										isSmall={true}
-										onClick={() => ref.current?.closeModal()}
+										onClick={handleCloseModal}
 									>
 										Cancel
 									</Button>
@@ -82,7 +82,7 @@ const Playground = (args: PlaygroundProps) => {
 										type="primary"
 										colorScheme="blue"
 										isSmall={true}
-										onClick={() => console.log('Clicked on "Apply" button')}
+										onClick={handleCloseModal}
 									>
 										Apply
 									</Button>

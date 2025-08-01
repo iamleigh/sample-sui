@@ -62,7 +62,7 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
 	) => {
 		// Define states
 		const [value, setValue] = useState<InputProps["defaultValue"]>(defaultValue)
-		const [isHovered, isFocused, interactionMethods] = useInteraction({
+		const [isHovered, isFocused] = useInteraction({
 			onMouseEnter,
 			onMouseLeave,
 			onMouseDownCapture,
@@ -71,10 +71,6 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
 			onBlur,
 			onBlurCapture,
 		})
-		const [hasError, setHasError] = useState(false)
-
-		// Properties validation
-		const hasID = !isUndefined(id) && !isEmpty(id)
 
 		useEffect(() => {
 			setValue(defaultValue)

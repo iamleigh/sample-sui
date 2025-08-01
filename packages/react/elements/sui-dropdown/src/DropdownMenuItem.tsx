@@ -24,7 +24,6 @@ const DropdownMenuItem: FC<DropdownMenuItemProps> = ({
 	variation = "",
 	variable,
 	description = "",
-	colorScheme = "default",
 	_type = "",
 	_htmlProps = {},
 	_style = {},

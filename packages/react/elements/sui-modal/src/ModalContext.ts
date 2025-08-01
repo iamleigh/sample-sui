@@ -1,5 +1,4 @@
-import React, { createContext } from "react"
-import { _renderHTMLPropsSafely } from "@wpmudev/sui-utils"
+import { createContext } from "react"
 import { ModalContextProps } from "./ModalContext.types"
 
 /**

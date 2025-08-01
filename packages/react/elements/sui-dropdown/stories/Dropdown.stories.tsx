@@ -201,13 +201,14 @@ const Playground = (args: PlaygroundProps) => {
 	}
 
 	const handleOption = (option: Record<string, any> | string) => {
-		let message = `You clicked on: ${option["label"]}`
+		let message = `You clicked on: ${(option as any)["label"]}`
 
 		if ("select-checkbox" === args.menuType) {
-			const status = option["isSelected"] ? "selected" : "unselected"
-			message = `You ${status} ${option["label"]}`
+			const status = (option as any)["isSelected"] ? "selected" : "unselected"
+			message = `You ${status} ${(option as any)["label"]}`
 		}
 
+		// eslint-disable-next-line no-console
 		console.log(message)
 	}
 
@@ -221,6 +222,7 @@ const Playground = (args: PlaygroundProps) => {
 
 		const results = query.length > 0 ? filtered.length : "ALL"
 
+		// eslint-disable-next-line no-console
 		console.log(`Search results: ${results}`)
 	}
 

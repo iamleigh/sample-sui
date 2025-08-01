@@ -20,19 +20,6 @@ export default {
 
 // Build "Upsell" story
 const Playground = (args: UpsellProps) => {
-	const actions = [
-		<div key={0}>
-			<Button type="primary" colorScheme="black" isSmall={true}>
-				Upgrade now
-			</Button>
-		</div>,
-		<div key={1}>
-			<Button type="tertiary" colorScheme="black" isSmall={true}>
-				Learn more
-			</Button>
-		</div>,
-	]
-
 	return (
 		<div className="sui-layout sui-layout--horizontal sui-layout--vertical">
 			<div className="sui-layout__content">

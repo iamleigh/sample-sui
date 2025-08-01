@@ -18,7 +18,6 @@ type getOptionOptTypes = {
  *
  * This interface extends common HTML attributes and style types, allowing for flexible customization.
  *
- * @remarks
  * - Supports single and multi-select modes, async loading, custom triggers, and search functionality.
  * - Menu items can be grouped or standalone, with custom content and selection callbacks.
  */
@@ -158,7 +157,7 @@ interface DropdownProps
 	 * Provides the current open state of the dropdown menu.
 	 *
 	 * @param isOpen - Boolean indicating whether the dropdown is currently open (`true`)
-	 * or closed (`false`).
+	 *               or closed (`false`).
 	 */
 	onMenuClick?: (isOpen: boolean) => void
 	/**
