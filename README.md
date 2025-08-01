@@ -16,7 +16,7 @@ at an extraction of the original Figma file at the link below:<br/>
 **The design varies from the final implementation in some parts since I had to adjust it when we migrated
 from Storybook 6 to Storybook 7, since it introduced new constraints to the showcase personalization.**
 
-🔐 **Note:** This is a production codebase. The UI system was deployed across WPMU DEV’s
+🔐 **Note:** This is a production codebase. The original UI system was deployed across WPMU DEV's
 plugin suite (Forminator, Smush, Hustle, and more). The submitted code samples were
 **solely coded by me (including the architecture I created for this project)** but authored
 by WPMU DEV and is free of sensitive business logic or proprietary APIs.
@@ -76,7 +76,7 @@ and its story; in others, I only authored the component.
 
 ### 📦 Why Lerna?
 
-Despite the rise of alternatives like Turborepo and Nx, **Lerna’s simplicity and zero-config linking**
+Despite the rise of alternatives like Turborepo and Nx, **Lerna's simplicity and zero-config linking**
 made it an ideal choice (at the time the project started) for a team working across dozens of packages
 with minimal overhead. It allowed consistent builds, scoped commands, and easy dependency updates
 without friction.
@@ -104,6 +104,12 @@ yarn install
 # Run the project locally
 yarn storybook
 ```
+
+### 🌐 Prefer a Live Preview?
+
+If you'd rather explore the project without installing dependencies locally,  
+you can view a hosted Storybook build here:  
+👉 [Live Preview on GitHub Pages](https://iamleigh.github.io/sample-sui/)
 
 ---
 
@@ -148,6 +154,6 @@ was required. For this reason, we remained on early 7.x versions where this flex
 - Note the **adherence to best practices** in naming conventions, accessibility (a11y), and architectural consistency.
 - Check how **logic is decoupled from UI**, using utilities, hooks, and context providers to keep components reusable and maintainable.
 
-If you'd like to dive deeper into any piece, I’d be happy to walk you through it.
+If you'd like to dive deeper into any piece, I'd be happy to walk you through it.
 
 — **Leighton Quito**
