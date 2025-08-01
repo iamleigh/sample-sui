@@ -107,8 +107,8 @@ yarn storybook
 
 ### 🌐 Prefer a Live Preview?
 
-If you'd rather explore the project without installing dependencies locally,  
-you can view a hosted Storybook build here:  
+If you'd rather explore the project without installing dependencies locally,
+you can view a hosted Storybook build here:<br/>
 👉 [Live Preview on GitHub Pages](https://iamleigh.github.io/sample-sui/)
 
 ---
